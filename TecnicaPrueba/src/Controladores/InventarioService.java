@@ -42,19 +42,21 @@ public class InventarioService {
         
     }
 
-    public void ver(Producto pro){
-    if(pro != null){
-        System.out.printf("ID:  \n Nombre:  \n Precio: \n Stock: ",
-                pro.getId(),
-                pro.getNombre(),
-                pro.getPrecio(),
-                pro.getCantidadStock());
-    }
-}
+    public void ver(Producto pro){ 
+        if( pro != null){ 
+            System.out.println("Informacion de Producto: "); 
+            System.out.println("Id: " + pro.getId()); 
+            System.out.println("nombre: " + pro.getNombre()); 
+            System.out.println("Precio: " +pro.getPrecio()); 
+            System.out.println("Cantidad de stock: "+ pro.getCantidadStock()); } }
+    
+    
     public void buscarId(int id){
     for(Producto pro : producto){
         if(id == pro.getId()){
-            System.out.println(pro);
+            System.out.println("Informacion de Id: "); 
+             int idBuscar = new Scanner(System.in).nextInt();
+            System.out.println(idBuscar);
             return; 
         }
     }
